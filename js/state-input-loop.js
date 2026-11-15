@@ -41,4 +41,4 @@ EXH.forEach((E,i)=>{const r=document.createElement('div');r.style.cssText='displ
 $('bImg').onclick=()=>$('imgs').style.display='flex';$('imgOk').onclick=()=>$('imgs').style.display='none';
 
 const TX={};
-const loadTX=()=>Promise.all(IMG_KEYS.map(k=>new Promise(ok=>new THREE.TextureLoader().load('assets/images/'+k+'.jpg',t=>{t.encoding=THREE.sRGBEncoding;t.anisotropy=8;TX[k]=t;ok()}))));
+const loadTX=()=>Promise.all(Object.keys(IM).map(k=>new Promise(ok=>new THREE.TextureLoader().load('data:image/jpeg;base64,'+IM[k],t=>{t.encoding=THREE.sRGBEncoding;t.anisotropy=8;TX[k]=t;ok()}))));

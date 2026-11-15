@@ -1,9 +1,5 @@
 # Relic Finder
 
-Static site. Models/textures are fetched, so serve over HTTP (file:// will not work):
+Open index.html directly. No server needed.
 
-    python3 -m http.server 8000
-
-then open http://localhost:8000
-
-Scripts are classic (non-module) and share globals, so the load order in index.html matters.
+Scripts are classic (non-module) and share globals, so load order in index.html matters.
